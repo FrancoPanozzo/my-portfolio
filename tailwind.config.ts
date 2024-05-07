@@ -8,7 +8,7 @@ export default <Partial<Config>>{
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './app.vue',
-    './error.vue',
+    './error.vue'
   ],
 
   darkMode: ['class'],
@@ -25,7 +25,7 @@ export default <Partial<Config>>{
           ...colors.red,
           DEFAULT: colors.red['600']
         }
-      },
+      }
     }
-  },
+  }
 }
