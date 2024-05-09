@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss'
-import colors from 'tailwindcss/colors'
 
 export default <Partial<Config>>{
   content: [
@@ -15,16 +14,24 @@ export default <Partial<Config>>{
 
   theme: {
     fontFamily: {
-      title: ['Roboto', 'sans-serif'],
-      body: ['Lato', 'sans-serif']
+      title: ['Poetsen One', 'sans-serif'],
+      body: ['Ubuntu Sans', 'sans-serif']
     },
 
     extend: {
       colors: {
         primary: {
-          ...colors.red,
-          DEFAULT: colors.red['600']
-        }
+          // DEFAULT: '#ffce00'
+        },
+        secondary: '#ffcdab',
+        // foreground: '#1b0044',
+        background: '#f5eee6',
+        foreground: '#062121'
+      },
+      boxShadow: {
+        // Needs to be the same as the foreground color
+        'button-hover': '0px 4px 0px 0px #062121',
+        'button-click': '0px 2px 0px 0px #062121'
       }
     }
   }
