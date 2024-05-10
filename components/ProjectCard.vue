@@ -5,6 +5,7 @@ export interface Props {
     title: string
     date: string
     description: string
+    url: string
   }
 }
 
@@ -12,7 +13,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <article class="cursor-pointer group">
+  <a :href="project.url" target="_blank" class="group">
     <div
       class="relative aspect-video rounded-md overflow-hidden border border-foreground group-hover:-translate-y-1 group-hover:translate-x-1 group-active:translate-x-0.5 transition-all group-hover:shadow-button-hover group-active:-translate-y-0.5 group-active:shadow-button-click"
     >
@@ -41,5 +42,5 @@ defineProps<Props>()
     <p class="text-foreground/70">
       {{ project.description }}
     </p>
-  </article>
+  </a>
 </template>

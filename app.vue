@@ -6,6 +6,7 @@ useHead({
   }
 })
 </script>
+
 <template>
   <NuxtPage />
 </template>
