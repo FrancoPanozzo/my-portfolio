@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 export interface Props {
-  img: string
-  title: string
-  date: string
-  description: string
+  project: {
+    img: string
+    title: string
+    date: string
+    description: string
+  }
 }
 
 defineProps<Props>()
@@ -21,23 +23,23 @@ defineProps<Props>()
         width="1920"
         loading="lazy"
         sizes="90vw md:324px lg:452px"
-        :src="img"
-        :alt="title"
+        :src="project.img"
+        :alt="project.title"
       />
     </div>
     <div>
       <div class="flex items-center gap-1 text-xs text-foreground/65 mt-3">
         <Icon name="mdi:calendar" />
-        <p>{{ date }}</p>
+        <p>{{ project.date }}</p>
       </div>
     </div>
     <h2
       class="text-2xl font-bold mt-2 mb-2 group-hover:underline font-title decoration-wavy decoration-[#ffb26b]"
     >
-      {{ title }}
+      {{ project.title }}
     </h2>
     <p class="text-foreground/70">
-      {{ description }}
+      {{ project.description }}
     </p>
   </article>
 </template>

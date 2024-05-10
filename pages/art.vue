@@ -32,8 +32,8 @@ const cardsData = [
     <h1 class="text-8xl font-bold font-title mb-2">Franco Panozzo</h1>
     <p class="text-4xl">Web developer</p>
     <Separator />
+    <SectionTitle title="Paragraphs" subtitle="with a personal touch"/>
     <div class="flex flex-col gap-8 ">
-      <SectionTitle title="Paragraphs" subtitle="with a personal touch"/>
     <p >
       It is a long established fact that
       <strong class="underline decoration-wavy font-normal decoration-[#ef255f]">
@@ -86,7 +86,8 @@ const cardsData = [
       <Separator />
       <SectionTitle title="Project cards" />
       <div class="grid grid-cols-3 gap-10  ">
-        <Card v-for="c in cardsData" :title="c.title" :description="c.description" :img="c.img" :date="c.date" />
+        <ProjectCard v-for="project in cardsData" :project="project"  />
       </div>
+      <Separator />
   </div>
 </template>
