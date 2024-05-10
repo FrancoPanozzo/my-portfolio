@@ -6,6 +6,7 @@ export interface Props {
     date: string
     description: string
     url: string
+    tech: string[]
   }
 }
 
@@ -32,6 +33,10 @@ defineProps<Props>()
       <div class="flex items-center gap-1 text-xs text-foreground/65 mt-3">
         <Icon name="mdi:calendar" />
         <p>{{ project.date }}</p>
+        <div class="ml-auto flex items-center gap-1">
+          <span>tech used</span>
+          <Icon v-for="item in project.tech" :name="item" class="size-4" />
+        </div>
       </div>
     </div>
     <h2
