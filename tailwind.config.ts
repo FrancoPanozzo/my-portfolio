@@ -30,8 +30,8 @@ export default <Partial<Config>>{
       },
       boxShadow: {
         // Needs to be the same as the foreground color
-        'button-hover': '0px 4px 0px 0px #062121',
-        'button-click': '0px 2px 0px 0px #062121'
+        'button-hover': '-2px 4px 0px 0px #062121',
+        'button-click': '-1px 2px 0px 0px #062121'
       }
     }
   }

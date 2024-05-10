@@ -1,0 +1,43 @@
+<script lang="ts" setup>
+export interface Props {
+  img: string
+  title: string
+  date: string
+  description: string
+}
+
+defineProps<Props>()
+</script>
+
+<template>
+  <article class="cursor-pointer group">
+    <div
+      class="relative aspect-video rounded-md overflow-hidden border border-foreground group-hover:-translate-y-1 group-hover:translate-x-1 group-active:translate-x-0.5 transition-all group-hover:shadow-button-hover group-active:-translate-y-0.5 group-active:shadow-button-click"
+    >
+      <NuxtImg
+        placeholder
+        class="absolute inset-0 object-cover aspect-video"
+        height="1080"
+        width="1920"
+        loading="lazy"
+        sizes="90vw md:324px lg:452px"
+        :src="img"
+        :alt="title"
+      />
+    </div>
+    <div>
+      <div class="flex items-center gap-1 text-xs text-foreground/65 mt-3">
+        <Icon name="mdi:calendar" />
+        <p>{{ date }}</p>
+      </div>
+    </div>
+    <h2
+      class="text-2xl font-bold mt-2 mb-2 group-hover:underline font-title decoration-wavy decoration-[#ffb26b]"
+    >
+      {{ title }}
+    </h2>
+    <p class="text-foreground/70">
+      {{ description }}
+    </p>
+  </article>
+</template>
