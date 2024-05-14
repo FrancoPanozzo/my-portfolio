@@ -70,23 +70,23 @@ const socialData = [
     <div class="flex flex-col gap-8 ">
     <p >
       It is a long established fact that
-      <strong class="underline decoration-wavy font-normal decoration-[#ef255f]">
+      <strong class="underline  font-normal decoration-[#ef255f]">
         a reader will be distracted</strong
         >
         by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
         is that it has a more-or-less look like readable English. Many desktop
-        <strong class="underline decoration-wavy font-normal decoration-[#3e64ff]"
+        <strong class="underline  font-normal decoration-[#3e64ff]"
         >publishing packages</strong #fd5f00
         >
         and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-        ipsum' will uncover many web sites still in their infancy. <strong class="underline decoration-wavy font-normal decoration-[#f35b25]"
+        ipsum' will uncover many web sites still in their infancy. <strong class="underline  font-normal decoration-[#f35b25]"
         >Various versions have evolved</strong> over
-        the years, <strong class="underline decoration-wavy font-normal decoration-[#15b7b9]"
+        the years, <strong class="underline  font-normal decoration-[#15b7b9]"
         >sometimes </strong>, sometimes on purpose (injected humour and the like).
       </p>
     <p >
       It is a long established fact that
-      <strong class="underline decoration-wavy font-normal decoration-[#0cca98]">
+      <strong class="underline  font-normal decoration-[#0cca98]">
         a reader will be distracted</strong
         >
         by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
@@ -95,7 +95,7 @@ const socialData = [
         >publishing packages</strong #fd5f00
         >
         and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
-        ipsum' will uncover many web sites still in their infancy. <strong class="underline decoration-wavy font-normal decoration-[#f59d2a]"
+        ipsum' will uncover many web sites still in their infancy. <strong class="underline  font-normal decoration-[#f59d2a]"
         >Various versions have evolved</strong> over
         the years, <strong class="line-through  font-normal decoration-[#b074e9]"
         >sometimes </strong>, sometimes on purpose (injected humour and the like).
