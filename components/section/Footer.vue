@@ -20,13 +20,12 @@ const socialData = [
 </script>
 
 <template>
-  <Container class="my-10">
-    <div class="flex items-center justify-between">
-      <p class="text-foreground/65">© 2024 Franco Panozzo. All rights reserved</p>
-
-      <div class="flex items-center gap-5">
+  <Container class="md:my-8 my-16">
+    <div class="flex items-center justify-between flex-col md:flex-row gap-11">
+      <div class="flex items-center gap-5 md:order-2">
         <SocialIcon v-for="social in socialData" :social="social" />
       </div>
+      <p class="text-foreground/65">© 2024 Franco Panozzo. All rights reserved</p>
     </div>
   </Container>
 </template>

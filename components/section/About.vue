@@ -9,12 +9,12 @@ const techStack = [
     name: 'Nuxt.js'
   },
   {
-    icon: 'logos:typescript-icon',
-    name: 'Typescript'
-  },
-  {
     icon: 'logos:javascript',
     name: 'Javascript'
+  },
+  {
+    icon: 'logos:typescript-icon',
+    name: 'Typescript'
   },
   {
     icon: 'logos:tailwindcss-icon',
@@ -53,7 +53,7 @@ const techStack = [
     </div>
 
     <SectionTitle title="My preferred stack" size="md" class="mb-8" />
-    <div class="flex gap-10">
+    <div class="flex md:gap-10 flex-col md:flex-row gap-8">
       <div class="flex gap-2 items-center" v-for="tech in techStack">
         <Icon :name="tech.icon" class="size-9" /><span class="font-medium">{{ tech.name }}</span>
       </div>
