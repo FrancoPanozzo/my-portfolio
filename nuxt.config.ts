@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode'
   },
   i18n: {
+    defaultLocale: 'en',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'lang_locale',
@@ -28,5 +29,10 @@ export default defineNuxtConfig({
       { name: 'Poetsen One', provider: 'google' },
       { name: 'Ubuntu Sans', provider: 'google' }
     ]
+  },
+  site: {
+    url: 'https://example.com',
+    name: "Franco Panozzo's Portfolio",
+    description: 'Portfolio website of Franco Panozzo, web developer.'
   }
 })

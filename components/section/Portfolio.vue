@@ -8,13 +8,30 @@ const cardsData = [
       'Web app MVP for a marketing startup. Includes a login system with Google SSO leveraging Supabase as a backend. Integrations with Google Ads and Meta Ads APIs for the custom business logic. Dark mode and internationalization as bonus.',
     url: 'https://zenllo.vercel.app/',
     tech: [
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:typescript-icon',
-      'logos:tailwindcss-icon',
-      'logos:google-ads',
-      'logos:meta-icon',
-      'logos:supabase-icon'
+      {
+        icon: 'logos:vue',
+        name: 'Vue 3'
+      },
+      {
+        icon: 'logos:nuxt-icon',
+        name: 'Nuxt 3'
+      },
+      {
+        icon: 'logos:typescript-icon',
+        name: 'Typescript'
+      },
+      {
+        icon: 'logos:tailwindcss-icon',
+        name: 'Tailwind'
+      },
+      {
+        icon: 'logos:google-ads',
+        name: 'Google Ads API'
+      },
+      {
+        icon: 'logos:meta-icon',
+        name: 'Meta Ads API'
+      }
     ]
   },
   {
@@ -25,12 +42,30 @@ const cardsData = [
       'A landing page for a spanish driving school. Contenful CMS integration for easy content updates. Hooked up to analytics tool to follow their traffic (pun intended) and conversions.',
     url: 'https://www.rockautoescuelas.com/',
     tech: [
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:typescript-icon',
-      'logos:tailwindcss-icon',
-      'logos:contentful',
-      'logos:google-analytics'
+      {
+        icon: 'logos:vue',
+        name: 'Vue 3'
+      },
+      {
+        icon: 'logos:nuxt-icon',
+        name: 'Nuxt 3'
+      },
+      {
+        icon: 'logos:typescript-icon',
+        name: 'Typescript'
+      },
+      {
+        icon: 'logos:tailwindcss-icon',
+        name: 'Tailwind'
+      },
+      {
+        icon: 'logos:contentful',
+        name: 'Contentful'
+      },
+      {
+        icon: 'logos:google-analytics',
+        name: 'Google Analytics'
+      }
     ]
   },
 
@@ -51,11 +86,26 @@ const cardsData = [
       'Website for a dutch creative agency. Designed by adapting a template to fit the clients budget and needs. Implemented using SSR for good SEO, fast loading times and reliability. Integrated Contenful CMS for easy content management.',
     url: 'https://www.sana-studio.nl/',
     tech: [
-      'logos:vue',
-      'logos:nuxt-icon',
-      'logos:typescript-icon',
-      'logos:tailwindcss-icon',
-      'logos:contentful'
+      {
+        icon: 'logos:vue',
+        name: 'Vue 3'
+      },
+      {
+        icon: 'logos:nuxt-icon',
+        name: 'Nuxt 3'
+      },
+      {
+        icon: 'logos:typescript-icon',
+        name: 'Typescript'
+      },
+      {
+        icon: 'logos:tailwindcss-icon',
+        name: 'Tailwind'
+      },
+      {
+        icon: 'logos:contentful',
+        name: 'Contentful'
+      }
     ]
   }
 ]
@@ -64,8 +114,17 @@ const cardsData = [
 <template>
   <Container>
     <SectionTitle title="Portfolio" subtitle="a couple of my handpicked favorites" />
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-16 md:gap-12">
       <ProjectCard v-for="project in cardsData" :project="project" />
+    </div>
+
+    <div class="mt-24 flex flex-col gap-6 mx-auto w-fit items-center">
+      <span class="text-lg">Do you want a web app developed?</span>
+      <a href="https://www.the-zeppelin.com/?ref=personal-portfolio" target="_blank">
+        <Button class="bg-portfolio flex items-center gap-2">
+          <Icon name="fa6-solid:arrow-up-right-from-square" />Get in touch!
+        </Button></a
+      >
     </div>
   </Container>
 

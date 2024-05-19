@@ -25,7 +25,7 @@ const socialData = [
       <div class="flex items-center gap-5 md:order-2">
         <SocialIcon v-for="social in socialData" :social="social" />
       </div>
-      <p class="text-foreground/65">© 2024 Franco Panozzo. All rights reserved</p>
+      <p class="text-foreground/65">© 2024 Franco Panozzo</p>
     </div>
   </Container>
 </template>

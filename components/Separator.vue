@@ -1,3 +1,3 @@
 <template>
-  <div class="w-full h-px bg-foreground/25"></div>
+  <div class="w-full h-px bg-foreground/10"></div>
 </template>

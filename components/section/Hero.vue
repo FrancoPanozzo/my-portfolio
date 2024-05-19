@@ -28,9 +28,7 @@ const socialData = [
       </h1>
       <p class="text-3xl italic text-center mb-8">
         I'm a
-        <strong class="underline decoration-dashed font-normal decoration-[#9c1de7]"
-          >web developer
-        </strong>
+        <strong class="underline decoration-dashed font-normal">web developer </strong>
       </p>
       <div class="flex items-center justify-center gap-4">
         <SocialIcon v-for="social in socialData" :social="social" />

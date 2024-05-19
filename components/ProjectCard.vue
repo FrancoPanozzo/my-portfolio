@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+interface Tech {
+  icon: string
+  name: string
+}
+
 export interface Props {
   project: {
     img: string
@@ -6,7 +11,7 @@ export interface Props {
     date: string
     description: string
     url: string
-    tech: string[]
+    tech: Tech[]
   }
 }
 
@@ -14,9 +19,9 @@ defineProps<Props>()
 </script>
 
 <template>
-  <a :href="project.url" target="_blank" class="group flex flex-col md:flex-row md:gap-8">
+  <a :href="project.url" target="_blank" class="group flex flex-col md:flex-row gap-4 md:gap-8">
     <div
-      class="md:h-52 relative aspect-video rounded-md overflow-hidden border border-foreground group-hover:-translate-y-1 group-hover:translate-x-1 group-active:translate-x-0.5 transition-all group-hover:shadow-button-hover group-active:-translate-y-0.5 group-active:shadow-button-click"
+      class="md:h-56 relative aspect-video rounded-md overflow-hidden border border-foreground group-hover:-translate-y-1 group-hover:translate-x-1 group-active:translate-x-0.5 transition-all group-hover:shadow-button-hover group-active:-translate-y-0.5 group-active:shadow-button-click"
     >
       <NuxtImg
         placeholder
@@ -30,24 +35,19 @@ defineProps<Props>()
       />
     </div>
     <div class="flex flex-col flex-1">
-      <div>
-        <div class="flex items-center gap-1 text-xs text-foreground/65 mt-3">
-          <Icon name="mdi:calendar" />
-          <p>{{ project.date }}</p>
-          <div class="ml-auto flex items-center gap-1">
-            <span>tech used</span>
-            <Icon v-for="item in project.tech" :name="item" class="size-4" />
-          </div>
-        </div>
-      </div>
+      <!-- <div class="flex items-center gap-1 text-xs text-foreground/65 mt-3 mb-2">
+        <Icon name="mdi:calendar" />
+        <p>{{ project.date }}</p>
+      </div> -->
       <SectionTitle
         :title="project.title"
         size="md"
-        class="mt-2 mb-2 group-hover:underline font-title decoration-dashed decoration-[#ffb26b]"
+        class="mb-2 underline font-title decoration-dashed decoration-portfolio"
       />
-      <p class="text-foreground/70">
+      <p class="text-foreground/70 text-lg md:text-xl my-2">
         {{ project.description }}
       </p>
+      <TechList :tech="project.tech" />
     </div>
   </a>
 </template>

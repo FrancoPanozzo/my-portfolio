@@ -20,18 +20,16 @@ export default <Partial<Config>>{
 
     extend: {
       colors: {
-        primary: {
-          // DEFAULT: '#ffce00'
-        },
-        secondary: '#ffcdab',
-        // foreground: '#1b0044',
-        background: '#f5eee6',
-        foreground: '#062121'
+        background: '#fffcf2',
+        foreground: '#252422',
+        portfolio: '#ffa3af',
+        experience: '#fee440',
+        about: '#00af54'
       },
       boxShadow: {
         // Needs to be the same as the foreground color
-        'button-hover': '-2px 4px 0px 0px #062121',
-        'button-click': '-1px 2px 0px 0px #062121'
+        'button-hover': '-2px 4px 0px 0px #252422',
+        'button-click': '-1px 2px 0px 0px #252422'
       }
     }
   }
