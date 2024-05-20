@@ -115,15 +115,15 @@ const jobs = [
       <div class="flex flex-col gap-24 mb-12">
         <div v-for="job in jobs" class="relative">
           <div
-            class="rounded-full size-4 bg-experience absolute -left-9 outline outline-foreground -translate-x-1.5 translate-y-8 scale-75"
+            class="rounded-full size-4 bg-accent absolute -left-9 outline outline-foreground -translate-x-1.5 translate-y-8 scale-75"
           ></div>
           <JobEntry :job="job" />
         </div>
       </div>
     </div>
-    <div class="mt-12 flex flex-col gap-4 mx-auto sm:flex-row w-fit">
+    <div class="mt-12 flex flex-col items-stretch sm:items-center gap-4 mx-auto sm:flex-row w-fit">
       <a href="https://www.linkedin.com/in/franco-panozzo/" target="_blank">
-        <Button class="bg-experience flex items-center gap-2">
+        <Button class="bg-accent flex items-center gap-2 w-full justify-center">
           <Icon name="fa6-brands:linkedin-in" />
           Let's connect!</Button
         ></a

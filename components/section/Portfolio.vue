@@ -121,7 +121,7 @@ const cardsData = [
     <div class="mt-24 flex flex-col gap-6 mx-auto w-fit items-center">
       <span class="text-lg">Do you want a web app developed?</span>
       <a href="https://www.the-zeppelin.com/?ref=personal-portfolio" target="_blank">
-        <Button class="bg-portfolio flex items-center gap-2">
+        <Button class="bg-accent flex items-center gap-2">
           <Icon name="fa6-solid:arrow-up-right-from-square" />Get in touch!
         </Button></a
       >

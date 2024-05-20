@@ -22,9 +22,7 @@ export default <Partial<Config>>{
       colors: {
         background: '#fffcf2',
         foreground: '#252422',
-        portfolio: '#ffa3af',
-        experience: '#fee440',
-        about: '#00af54'
+        accent: '#fee440'
       },
       boxShadow: {
         // Needs to be the same as the foreground color

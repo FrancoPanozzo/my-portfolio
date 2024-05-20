@@ -39,11 +39,9 @@ defineProps<Props>()
         <Icon name="mdi:calendar" />
         <p>{{ project.date }}</p>
       </div> -->
-      <SectionTitle
-        :title="project.title"
-        size="md"
-        class="mb-2 underline font-title decoration-dashed decoration-portfolio"
-      />
+      <MarkerUnderline>
+        <SectionTitle :title="project.title" size="md" class="mb-2 font-title w-fit"
+      /></MarkerUnderline>
       <p class="text-foreground/70 text-lg md:text-xl my-2">
         {{ project.description }}
       </p>
