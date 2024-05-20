@@ -40,9 +40,9 @@ defineProps<Props>()
         <p>{{ project.date }}</p>
       </div> -->
       <MarkerUnderline>
-        <SectionTitle :title="project.title" size="md" class="mb-2 font-title w-fit"
+        <SectionTitle :title="project.title" size="md" class="mb-1 font-title w-fit"
       /></MarkerUnderline>
-      <p class="text-foreground/70 text-lg md:text-xl my-2">
+      <p class="text-foreground/70 text-lg md:text-xl mb-2 mt-5">
         {{ project.description }}
       </p>
       <TechList :tech="project.tech" />
