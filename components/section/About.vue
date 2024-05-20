@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import MarkerUnderline from '../MarkerUnderline.vue'
+const { t } = useI18n({
+  useScope: 'local'
+})
 
 const techStack = [
   {
@@ -21,6 +23,10 @@ const techStack = [
   {
     icon: 'logos:tailwindcss-icon',
     name: 'Tailwind CSS'
+  },
+  {
+    icon: 'logos:nodejs-icon',
+    name: 'Node.js'
   }
 ]
 </script>
@@ -29,7 +35,7 @@ const techStack = [
   <Container class="mb-32">
     <div class="flex gap-16">
       <div class="flex-1">
-        <SectionTitle title="About me" class="mb-8" />
+        <SectionTitle :title="t('title')" class="mb-8" />
 
         <div class="flex flex-col gap-8 text-lg md:text-xl mb-16">
           <p>
@@ -55,7 +61,7 @@ const techStack = [
         <NuxtImg class="w-full h-full object-cover" src="/img/me-cartoon.png" />
       </div>
     </div>
-    <SectionTitle title="My preferred stack" size="md" class="mb-8" />
+    <SectionTitle :title="t('subtitle')" size="md" class="mb-8" />
     <div class="flex md:gap-10 flex-col md:flex-row gap-8">
       <div class="flex gap-2 items-center" v-for="tech in techStack">
         <Icon :name="tech.icon" class="size-9" /><span class="font-medium">{{ tech.name }}</span>
@@ -71,3 +77,20 @@ const techStack = [
   background: radial-gradient(circle, rgba(254, 252, 242, 0) 75%, rgba(254, 252, 242, 1) 80%);
 }
 </style>
+
+<i18n lang="json">
+{
+  "en": {
+    "title": "About me",
+    "subtitle": "My preferred stack"
+  },
+  "fr": {
+    "title": "À propos",
+    "subtitle": "Mon stack préféré"
+  },
+  "es": {
+    "title": "Sobre mí",
+    "subtitle": "Mi stack preferido"
+  }
+}
+</i18n>

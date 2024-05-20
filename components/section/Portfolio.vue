@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const { t } = useI18n({
+  useScope: 'local'
+})
+
 const cardsData = [
   {
     title: 'Zenllo',
@@ -113,16 +117,16 @@ const cardsData = [
 
 <template>
   <Container>
-    <SectionTitle title="Portfolio" subtitle="a couple of my handpicked favorites" />
+    <SectionTitle :title="t('title')" :subtitle="t('subtitle')" />
     <div class="flex flex-col gap-16 md:gap-12">
       <ProjectCard v-for="project in cardsData" :project="project" />
     </div>
 
     <div class="mt-24 flex flex-col gap-6 mx-auto w-fit items-center">
-      <span class="text-lg">Do you want a web app developed?</span>
+      <span class="text-lg">{{ t('cta_question') }}</span>
       <a href="https://www.the-zeppelin.com/?ref=personal-portfolio" target="_blank">
         <Button class="bg-accent flex items-center gap-2">
-          <Icon name="fa6-solid:arrow-up-right-from-square" />Get in touch!
+          <Icon name="fa6-solid:arrow-up-right-from-square" />{{ t('cta_button') }}
         </Button></a
       >
     </div>
@@ -130,3 +134,26 @@ const cardsData = [
 
   <Separator />
 </template>
+
+<i18n lang="json">
+{
+  "en": {
+    "title": "Portfolio",
+    "subtitle": "a couple of my handpicked favorites",
+    "cta_question": "Do you want a web app?",
+    "cta_button": "Get in touch!"
+  },
+  "fr": {
+    "title": "Portfolio",
+    "subtitle": "quelques-uns de mes favoris",
+    "cta_question": "Vous voulez une application web?",
+    "cta_button": "Contactez-moi!"
+  },
+  "es": {
+    "title": "Portafolio",
+    "subtitle": "algunos de mis favoritos",
+    "cta_question": "¿Quieres una aplicación web?",
+    "cta_button": "¡Ponte en contacto!"
+  }
+}
+</i18n>

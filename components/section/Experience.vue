@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const { t } = useI18n({
+  useScope: 'local'
+})
+
 const jobs = [
   {
     company: 'TMC by Unilabs',
@@ -105,17 +109,14 @@ const jobs = [
 
 <template>
   <Container>
-    <SectionTitle
-      title="Experience"
-      subtitle="development related... I was also delivery guy once"
-    />
+    <SectionTitle :title="t('title')" :subtitle="t('subtitle')" />
     <div class="flex gap-8">
       <div class="w-2 bg-foreground/5 rounded-full"></div>
 
       <div class="flex flex-col gap-24 mb-12">
         <div v-for="job in jobs" class="relative">
           <div
-            class="rounded-full size-4 bg-accent absolute -left-9 outline outline-foreground -translate-x-1.5 translate-y-8 scale-75"
+            class="rounded-full size-4 bg-accent absolute -left-9 -translate-x-1.5 translate-y-8 scale-75"
           ></div>
           <JobEntry :job="job" />
         </div>
@@ -125,12 +126,12 @@ const jobs = [
       <a href="https://www.linkedin.com/in/franco-panozzo/" target="_blank">
         <Button class="bg-accent flex items-center gap-2 w-full justify-center">
           <Icon name="fa6-brands:linkedin-in" />
-          Let's connect!</Button
+          {{ t('linkedin_cta') }}</Button
         ></a
       >
       <a href="/franco-panozzo-cv.pdf" download>
         <Button class="flex items-center gap-2"
-          ><Icon name="fa6-solid:download" />Download my CV</Button
+          ><Icon name="fa6-solid:download" />{{ t('download_cv') }}</Button
         ></a
       >
     </div>
@@ -138,3 +139,26 @@ const jobs = [
 
   <Separator />
 </template>
+
+<i18n lang="json">
+{
+  "en": {
+    "title": "Professional experience",
+    "subtitle": "development related... I was also delivery guy once",
+    "linkedin_cta": "Let's connect!",
+    "download_cv": "Download my CV"
+  },
+  "fr": {
+    "title": "Expérience professionnelle",
+    "subtitle": "en développement... J'ai aussi été livreur une fois",
+    "linkedin_cta": "Connectons-nous!",
+    "download_cv": "Téléchargez mon CV"
+  },
+  "es": {
+    "title": "Experiencia laboral",
+    "subtitle": "en desarrollo... También fui repartidor una vez",
+    "linkedin_cta": "¡Conectemos!",
+    "download_cv": "Descarga mi CV"
+  }
+}
+</i18n>

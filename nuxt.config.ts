@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxt/image',
     '@nuxtjs/seo',
-    '@nuxt/fonts'
+    '@nuxt/fonts',
+    'shadcn-nuxt'
   ],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
@@ -37,5 +38,8 @@ export default defineNuxtConfig({
     url: 'https://example.com',
     name: "Franco Panozzo's Portfolio",
     description: 'Portfolio website of Franco Panozzo, web developer.'
+  },
+  shadcn: {
+    prefix: ''
   }
 })
