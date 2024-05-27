@@ -23,10 +23,6 @@ const techStack = [
   {
     icon: 'logos:tailwindcss-icon',
     name: 'Tailwind CSS'
-  },
-  {
-    icon: 'logos:nodejs-icon',
-    name: 'Node.js'
   }
 ]
 </script>
@@ -37,20 +33,20 @@ const techStack = [
       <div class="flex-1">
         <SectionTitle :title="t('title')" class="mb-8" />
 
-        <div class="flex flex-col gap-8 text-lg md:text-xl mb-16">
+        <div class="flex flex-col gap-8 mb-16 text-lg md:text-xl">
           <p v-for="p in tm('text')">
             {{ p.loc.source }}
           </p>
         </div>
       </div>
-      <div class="w-72 relative hidden lg:block">
-        <div class="inset-0 gradient absolute"></div>
-        <NuxtImg class="w-full h-full object-cover" src="/img/me-cartoon.png" />
+      <div class="relative hidden w-[350px] lg:block">
+        <div class="absolute inset-0 gradient"></div>
+        <NuxtImg class="object-cover w-full h-full" src="/img/me-cartoon.png" />
       </div>
     </div>
     <SectionTitle :title="t('subtitle')" size="md" class="mb-8" />
-    <div class="flex md:gap-10 flex-col md:flex-row gap-8">
-      <div class="flex gap-2 items-center" v-for="tech in techStack">
+    <div class="flex flex-col gap-8 md:gap-10 md:flex-row">
+      <div class="flex items-center gap-2" v-for="tech in techStack">
         <Icon :name="tech.icon" class="size-9" /><span class="font-medium">{{ tech.name }}</span>
       </div>
     </div>

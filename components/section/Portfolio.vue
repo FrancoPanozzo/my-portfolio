@@ -2,8 +2,6 @@
 const { t, tm } = useI18n({
   useScope: 'local'
 })
-
-console.log(tm('projects')[0].img.loc.source)
 </script>
 
 <template>
@@ -13,10 +11,10 @@ console.log(tm('projects')[0].img.loc.source)
       <ProjectCard v-for="project in tm('projects')" :project="project" />
     </div>
 
-    <div class="mt-24 flex flex-col gap-6 mx-auto w-fit items-center">
+    <div class="flex flex-col items-center gap-6 mx-auto mt-24 w-fit">
       <span class="text-lg">{{ t('cta_question') }}</span>
       <a href="https://www.the-zeppelin.com/?ref=personal-portfolio" target="_blank">
-        <Button class="bg-accent flex items-center gap-2">
+        <Button class="flex items-center gap-2 bg-accent">
           <Icon name="fa6-solid:arrow-up-right-from-square" />{{ t('cta_button') }}
         </Button></a
       >

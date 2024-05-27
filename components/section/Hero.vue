@@ -24,16 +24,16 @@ const socialData = [
 </script>
 
 <template>
-  <Container class="my-0 flex justify-end">
+  <div class="container flex justify-end max-w-screen-lg px-5 mx-auto lg:px-0">
     <LanguageSelect />
-  </Container>
-  <Container class="mt-16">
+  </div>
+  <Container class="relative mt-16">
     <div class="flex flex-col gap-8">
       <p class="text-3xl italic text-center">{{ t('hi') }}</p>
-      <h1 class="sm:text-8xl text-7xl font-bold font-title text-center leading-none mb-4">
+      <h1 class="mb-4 font-bold leading-none text-center sm:text-8xl text-7xl font-title">
         Franco Panozzo
       </h1>
-      <p class="text-3xl italic text-center mb-8">
+      <p class="mb-8 text-3xl italic text-center">
         {{ t('i_am') }}
         <MarkerUnderline>{{ t('role') }}</MarkerUnderline>
       </p>
