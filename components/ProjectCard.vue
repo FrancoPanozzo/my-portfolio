@@ -1,16 +1,22 @@
 <script lang="ts" setup>
+interface tm<T> {
+  loc: {
+    source: T
+  }
+}
+
 interface Tech {
-  icon: string
-  name: string
+  icon: tm<string>
+  name: tm<string>
 }
 
 export interface Props {
   project: {
-    img: string
-    title: string
-    date: string
-    description: string
-    url: string
+    img: tm<string>
+    title: tm<string>
+    date: tm<string>
+    description: tm<string>
+    url: tm<string>
     tech: Tech[]
   }
 }

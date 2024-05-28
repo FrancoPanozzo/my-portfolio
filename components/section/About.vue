@@ -25,6 +25,12 @@ const techStack = [
     name: 'Tailwind CSS'
   }
 ]
+
+interface tm<T> {
+  loc: {
+    source: T
+  }
+}
 </script>
 
 <template>
@@ -34,7 +40,7 @@ const techStack = [
         <SectionTitle :title="t('title')" class="mb-8" />
 
         <div class="flex flex-col gap-8 mb-16 text-lg md:text-xl">
-          <p v-for="p in tm('text')">
+          <p v-for="p in tm('text') as tm<string>[]">
             {{ p.loc.source }}
           </p>
         </div>
