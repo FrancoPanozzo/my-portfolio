@@ -28,15 +28,15 @@ export default defineNuxtConfig({
       { code: 'fr', iso: 'fr-FR', dir: 'ltr', file: 'fr.ts' },
       { code: 'es', iso: 'es-ES', dir: 'ltr', file: 'es.ts' }
     ],
-    detectBrowserLanguage: false,
-    strategy: 'no_prefix',
+    // detectBrowserLanguage: false,
+    strategy: 'prefix',
     // lazy: true,
-    langDir: 'lang'
-    // detectBrowserLanguage: {
-    //   useCookie: true,
-    //   cookieKey: 'lang_locale',
-    //   redirectOn: 'root' // recommended
-    // }
+    langDir: 'lang',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'lang_locale',
+      redirectOn: 'root' // recommended
+    }
   },
   fonts: {
     families: [

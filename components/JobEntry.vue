@@ -47,7 +47,7 @@ const j = computed(() => {
         <span class="text-xs text-foreground/65">{{ j.date }}</span>
         <SectionTitle :title="j.title" size="md" class="mt-2 mb-1" />
         <span>
-          <span class="text-foreground/65">at </span>
+          <span class="text-foreground/65">{{ $t('experience.at') + ' ' }}</span>
           <a
             target="_blank"
             :href="j.url"
