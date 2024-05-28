@@ -21,12 +21,22 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode'
   },
   i18n: {
+    vueI18n: './i18n.config.ts',
     defaultLocale: 'en',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'lang_locale',
-      redirectOn: 'root' // recommended
-    }
+    locales: [
+      { code: 'en', iso: 'en-US', dir: 'ltr', file: 'en.ts' },
+      { code: 'fr', iso: 'fr-FR', dir: 'ltr', file: 'fr.ts' },
+      { code: 'es', iso: 'es-ES', dir: 'ltr', file: 'es.ts' }
+    ],
+    detectBrowserLanguage: false,
+    strategy: 'no_prefix',
+    // lazy: true,
+    langDir: 'lang'
+    // detectBrowserLanguage: {
+    //   useCookie: true,
+    //   cookieKey: 'lang_locale',
+    //   redirectOn: 'root' // recommended
+    // }
   },
   fonts: {
     families: [
